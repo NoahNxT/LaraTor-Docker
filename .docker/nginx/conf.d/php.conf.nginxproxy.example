@@ -1,0 +1,37 @@
+server {
+    listen 443 ssl http2;
+    listen [::]:433 ssl http2;
+    server_name dalukas.dev www.dalukas.dev;
+    ssl_certificate /etc/positiveSSL/live/npm-7/fullchain.pem;
+    ssl_certificate_key /etc/positiveSSL/live/npm-7/privkey.pem;
+    root /var/www/php/public;
+    index       index.php index.html index.htm;
+    try_files $uri $uri/ /index.php$is_args$args;
+    client_max_body_size 100M;
+
+  location ~* \.php$ {
+        fastcgi_pass   php:9000;
+        include        fastcgi_params;
+        fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param  SCRIPT_NAME     $fastcgi_script_name;
+    }
+
+    location /uploads/ {
+         root /var/www/php/storage/app/public/;
+    }
+
+    location ^~ /.well-known/acme-challenge/ {
+        default_type "text/plain";
+        rewrite /.well-known/acme-challenge/(.*) /$1 break;
+        root /var/www/php/letsencrypt;
+
+}
+}
+
+server {
+    listen 80 default_server;
+
+    server_name _;
+
+    return 301 https://$host$request_uri;
+}
