@@ -2,9 +2,9 @@
 
 1. clone laravel project in src folder
 2. change .env of your laravel project:<br>
-    &ndsp a. DB_HOST=mysql <br>
-    &ndsp b. DB_DATABASE= <! Name you chose in .env in the main directory !> <br>
-    &ndsp c. DB_PASSWORD= <! Root password you chose in .env in the main directory !> <br>
+    a. DB_HOST=mysql <br>
+    b. DB_DATABASE= <! Name you chose in .env in the main directory !> <br>
+    c. DB_PASSWORD= <! Root password you chose in .env in the main directory !> <br>
 3. In the main dir do `source aliases.sh`. This will give you  the needed commands
 4. Do `dinit` -> enter (This does the whole installation of your laravel project like composer install, etc...)
 5. Do `donion` -> This prints your .onion adress in the terminal.
