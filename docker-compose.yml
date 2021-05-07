@@ -39,7 +39,6 @@ services:
       - 469:443
     restart: always
     volumes:
-      - ~/npm/letsencrypt:/etc/positiveSSL
       - ./src:/var/www/php:ro
       - ./.docker/nginx/conf.d:/etc/nginx/conf.d:ro
     depends_on:
@@ -66,7 +65,7 @@ services:
       MYSQL_DATABASE: demo
     volumes:
       - ./.docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf:ro
-      - mysqldata:/var/lib/mysql
+      - ./mysqldata:/var/lib/mysql
 
   # PhpMyAdmin Service
   phpmyadmin:
@@ -79,8 +78,4 @@ services:
     depends_on:
       - mysql
 
-# Volumes
-volumes:
-
-  mysqldata:
 

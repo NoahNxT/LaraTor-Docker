@@ -13,6 +13,7 @@ alias dinit='docker exec PHP bash -c "composer install ; npm install ; php artis
 alias dartisan=artisan
 alias dcomposer=composer
 alias dnode=node
+alias donion='docker exec -ti Tor onions'
 
 composer() {
     docker-compose exec $PHP_CONTAINER composer $@
@@ -26,4 +27,4 @@ node() {
     docker-compose exec $PHP_CONTAINER yarn $@
 }
 
-echo "Available commands: dinit, dcomposer, dartisan, dnode"
+echo "Available commands: dinit, dcomposer, dartisan, dnode, donion"
