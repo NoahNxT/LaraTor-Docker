@@ -5,6 +5,7 @@ services:
 
   # Tor Service
   tor:
+    container_name: Tor
     image: goldy/tor-hidden-service:0.3.5.8
     links:
       - nginx
@@ -32,7 +33,7 @@ services:
   # Nginx Service
   nginx:
     image: nginx:latest
-    container_name: webserver
+    container_name: Nginx
     ports:
       - 86:80
       - 469:443
@@ -46,6 +47,7 @@ services:
 
   # PHP Service
   php:
+    container_name: PHP
     build: ./.docker/php
     working_dir: /var/www/php
     restart: always
@@ -56,6 +58,7 @@ services:
 
   # MySQL Service
   mysql:
+    container_name: MySQL
     image: mysql:latest
     restart: always
     environment:
@@ -67,6 +70,7 @@ services:
 
   # PhpMyAdmin Service
   phpmyadmin:
+    container_name: PHPmyAdmin
     image: phpmyadmin/phpmyadmin:latest
     ports:
       - 8085:80
