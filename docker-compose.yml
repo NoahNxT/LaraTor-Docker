@@ -50,15 +50,4 @@ services:
       - ./.docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf:ro
       - ./mysqldata:/var/lib/mysql
 
-  # PhpMyAdmin Service
-  phpmyadmin:
-    container_name: PHPmyAdmin
-    image: phpmyadmin/phpmyadmin:latest
-    ports:
-      - 8085:80
-    environment:
-      PMA_HOST: mysql
-    depends_on:
-      - mysql
-
 

@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# setting sudo sysctl -w vm.max_map_count=262144
-#echo "For elasticsearch: setting sudo sysctl -w vm.max_map_count=262144"
-#sudo sysctl -w vm.max_map_count=262144
-
-
 IN_DOCKER_PATH="/var/www/php"
 
 PHP_CONTAINER=php
