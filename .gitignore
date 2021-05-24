@@ -1,4 +1,5 @@
 .env
 src/*
+!somefolder/.gitkeep 
 .DS_Store
 .docker/mysql/mysqldata
