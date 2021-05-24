@@ -1,4 +1,4 @@
 .env
 /src
 .DS_Store
-/mysqldata
+.docker/mysql/mysqldata

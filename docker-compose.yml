@@ -7,6 +7,7 @@ services:
   tor:
     container_name: Tor
     image: goldy/tor-hidden-service:0.3.5.8
+    restart: always
     links:
       - nginx
     environment:
@@ -48,6 +49,14 @@ services:
       MYSQL_DATABASE: "${MYSQL_DATABASE}"
     volumes:
       - ./.docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf:ro
-      - ./mysqldata:/var/lib/mysql
+      - .docker/mysql/mysqldata:/var/lib/mysql
+
+  #Redis Service
+  redis:
+    image: "redis:alpine"
+    container_name: Redis
+    restart: always
+    ports:
+      - "6379:6379"
 
 
