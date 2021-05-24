@@ -5,6 +5,7 @@ LaraTor is a LEMP stack for **Laravel 8 ** projects with with **PHP 8.0.3** that
 If you like the image or/and idea, be sure to star the repo and watch it if you want to be updated with all the new upcoming features.
 
 [LaraTor Repo](https://github.com/NoahNxT/LaraTor-Docker)
+
 [Follow Me!](https://github.com/NoahNxT)
 
 # Docker Compose
