@@ -8,6 +8,11 @@ If you like the image or/and idea, be sure to star the repo and watch it if you 
 
 [Follow Me!](https://github.com/NoahNxT)
 
+# IMPORTANT!
+Clone my repo from github.
+
+For example: ```git clone git@github.com:NoahNxT/LaraTor-Docker.git```
+
 # Docker Compose
 *V3-version*
 ```
