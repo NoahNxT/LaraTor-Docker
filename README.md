@@ -134,15 +134,10 @@ I've created an **aliases.sh** file that allows you to easily execute commands i
 5. `donion`
 	a.Returns your **.onion** address of your website.
 
-## Delete mysqldata
+## Delete directory mysqldata
 
 If you change any values in the **.env's** be sure that you remove the folder `mysqldata` in `.docker/mysql`
-
-## Export a file
-
-You can export the current file by clicking **Export to disk** in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.
 
 
 ##  Disclaimer
 This image is for educational purposes. Do not use it with bad intentions. I'm not responsible for any consequences you get by using this image with bad intentions.
-
